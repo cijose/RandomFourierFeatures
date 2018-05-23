@@ -1,0 +1,13 @@
+TEST_BINARIES = glob(
+        ["**/test_rnn_layer.cc",],
+        #excludes=[
+        #            "gtest_main.cpp",
+        #        ],
+    )
+cpp_binary(
+    headers = AutoHeaders.RECURSIVE_GLOB,
+    name = "test_cervnet",
+    srcs = TEST_BINARIES,
+    deps = ["@/experimental/deeplearning/cijose/cervnet/src:libcervnet"],
+    external_deps = ["gtest", "gflags", "glog"],
+)

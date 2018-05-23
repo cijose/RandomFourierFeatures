@@ -1,0 +1,12 @@
+*.txt
+*.train
+*.test
+*.*~
+*~
+*.o
+*.so
+lib*
+*.out
+*.bin
+*.cuo
+*.pb.*
